@@ -50,9 +50,6 @@ export default defineNuxtConfig({
   },
 
   app: {
-    pageTransition: { name: 'fade', mode: 'out-in' },
-    baseURL: "/homepage_alt"
+    pageTransition: { name: 'fade', mode: 'out-in' }
   }
-
-  
 })
