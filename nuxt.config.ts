@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   experimental: {
     asyncEntry: false,
     reactivityTransform: false,
@@ -28,8 +28,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
-    '@nuxt/content',
-    '@hypernym/nuxt-gsap'
+    '@nuxt/content'
   ],
 
   googleFonts: {
@@ -40,16 +39,14 @@ export default defineNuxtConfig({
   },
 
   plugins: [
-    '~/plugins/preline.client.js'
+    '~/plugins/preline.client.ts'
   ],
-
-  gsap: {
-    extraPlugins: {
-      text: true
-    },
-  },
 
   app: {
     pageTransition: { name: 'fade', mode: 'out-in' }
+  },
+
+  build: {
+    transpile: ["gsap"]
   }
 })

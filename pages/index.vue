@@ -27,26 +27,27 @@
 
 <script setup>
 
-const { $gsap } = useNuxtApp()
-const { $TextPlugin } = useNuxtApp()
+import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
 
 onMounted(() => {
-    $gsap.registerEffect({
+    gsap.registerPlugin(TextPlugin);
+    gsap.registerEffect({
         name: "reveal",
         effect: (targets, config) => {
-            return $gsap.fromTo(targets, { x: config.x, y: config.y, autoAlpha: 0 }, { x: 0, y: 0, autoAlpha: 1 })
+            return gsap.fromTo(targets, { x: config.x, y: config.y, autoAlpha: 0 }, { x: 0, y: 0, autoAlpha: 1 })
         },
         defaults: { x: 0, y: 0 },
         extendTimeline: true,
     });
 
-    $gsap.from("p.one", { duration: 4, text: "" }, 1);
-    $gsap.from("p.two", { duration: 5, text: "" }, 5);
+    gsap.from("p.one", { duration: 4, text: "" }, 1);
+    gsap.from("p.two", { duration: 5, text: "" }, 5);
 
-    $gsap.to("#sliding", { duration: 0.6, y: -25, ease: "back"}, 12);
+    gsap.to("#sliding", { duration: 0.6, y: -25, ease: "back"}, 12);
 
 
-    const tl = $gsap.timeline();
+    const tl = gsap.timeline();
 
     tl.reveal("#revealing", { y: 200 }, 9);
     tl.staggerFromTo("h1 span.blurry", 1.5, { filter: "blur(1.5rem)", opacity: 0 }, { filter: "blur(0rem)", opacity: 1 }, 0.5, 10);

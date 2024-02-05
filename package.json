@@ -10,17 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@hypernym/nuxt-gsap": "^2.4.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.1.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "gsap": "^3.12.5",
     "latest": "^0.2.0",
-    "nuxt": "^3.8.2",
+    "nuxt": "^3.10.1",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
-    "preline": "^2.0.2"
+    "preline": "^2.0.3"
   }
 }

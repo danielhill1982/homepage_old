@@ -9,7 +9,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path fill-rule="evenodd" d="M2 3.75A.75.75 0 012.75 3h11.5a.75.75 0 010 1.5H2.75A.75.75 0 012 3.75zM2 7.5a.75.75 0 01.75-.75h7.508a.75.75 0 010 1.5H2.75A.75.75 0 012 7.5zM14 7a.75.75 0 01.75.75v6.59l1.95-2.1a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 111.1-1.02l1.95 2.1V7.75A.75.75 0 0114 7zM2 11.25a.75.75 0 01.75-.75h4.562a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
                         </svg>
-                    </button>
+         </button>
                 </div>
             </div>
             <div id="navbar-collapse-with-animation" class="hs-collapse hidden sm:overflow-visible overflow-hidden transition-all duration-300 basis-full grow sm:block">
@@ -32,7 +32,9 @@
                 </ul>
             </div>
         </nav>
+        
     </header>
+
     <main>
         <slot></slot>
     </main>
@@ -45,10 +47,10 @@
 
 <script setup>
 
-const { $gsap } = useNuxtApp()
+import { gsap } from 'gsap';
 
 onMounted(() => {
-    $gsap.fromTo(".rainbow", {
+    gsap.fromTo(".rainbow", {
         backgroundColor: function (index, target, targets) {
             return "hsl(" + ((index / targets.length) * 360) + ", 100%, 50%)";
         }
@@ -70,7 +72,7 @@ onMounted(() => {
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * window.innerHeight;
 
-        $gsap.set(particle, {
+        gsap.set(particle, {
             width: size,
             height: size,
             x: x,
@@ -78,7 +80,7 @@ onMounted(() => {
             opacity: 0,
         });
 
-        $gsap.to(particle, {
+        gsap.to(particle, {
             duration: Math.random() * 9 + 3,
             x: x + Math.random() * 50 - 25,
             y: y + Math.random() * 50 - 25,
