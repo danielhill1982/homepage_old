@@ -1,29 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  experimental: {
-    asyncEntry: false,
-    reactivityTransform: false,
-    externalVue: false,
-    treeshakeClientOnly: false,
-    emitRouteChunkError: 'automatic',
-    restoreState: false,
-    inlineSSRStyles: false,
-    noScripts: false,
-    renderJsonPayloads: true,
-    noVueServer: false,
-    payloadExtraction: false,
-    clientFallback: false,
-    crossOriginPrefetch: false,
-    viewTransition: false,
-    writeEarlyHints: false,
-    componentIslands: false,
-    configSchema: false,
-    polyfillVueUseHead: false,
-    respectNoSSRHeader: false,
-    localLayerAliases: false,
-    typedPages: false
-  },
+  
 
   modules: [
     '@nuxtjs/tailwindcss',

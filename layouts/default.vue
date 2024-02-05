@@ -35,6 +35,7 @@
         
     </header>
 
+
     <main>
         <slot></slot>
     </main>
@@ -111,8 +112,7 @@ onMounted(() => {
 
     useHead({
         htmlAttrs: {
-            lang: 'de',
-            class: ''
+            lang: 'de'
         },
 
         bodyAttrs: {
