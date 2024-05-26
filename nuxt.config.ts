@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   googleFonts: {
     preload: true,
     families: {
-      Comfortaa: true
+      Poppins: true
     }
   },
 

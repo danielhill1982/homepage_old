@@ -153,6 +153,6 @@ onMounted(() => {
 }
 
 body {
-    font-family: Comfortaa, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 </style>
